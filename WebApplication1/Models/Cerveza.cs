@@ -20,5 +20,7 @@ namespace WebApplication1.Models
         [Required(ErrorMessage = "Ingresa el Precio de la Cerveza")]
         [Display(Name = "Precio")]
         public double precio { get; set; }
+        [Display(Name ="Imagen")]
+        public string? UrlImagen { get; set; }
     }
 }
