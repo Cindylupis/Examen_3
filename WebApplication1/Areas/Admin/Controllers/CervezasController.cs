@@ -135,8 +135,9 @@ namespace WebApplication1.Areas.Admin.Controllers
                             {
                                 System.IO.File.Delete(rutaImagenActual);
                             }
-                            _context.Entry(cervezabd).State = EntityState.Detached;
+                            
                         }
+                        _context.Entry(cervezabd).State = EntityState.Modified;
                         string nombreArchivo = Guid.NewGuid().ToString();
                         var subidas = Path.Combine(rutaPrincipal, @"imagenes/cervezas");
                         var extension = Path.GetExtension(archivos[0].FileName);
