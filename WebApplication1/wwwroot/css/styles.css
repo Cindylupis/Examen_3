@@ -1,0 +1,39 @@
+﻿.boton {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background: #141414;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .boton span {
+        z-index: 2;
+    }
+
+    .boton.dos::after {
+        content: "";
+        width: calc(100% + 80px);
+        height: 0;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: calc(-100% - 80px);
+        border-bottom: 80px solid #286cff;
+        border-right: 80px solid transparent;
+        transition: .4s ease-in-out all;
+    }
+
+    .boton.dos:hover::after {
+        left: 0;
+    }
